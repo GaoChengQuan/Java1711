@@ -10,6 +10,7 @@ public class ForDemo {
 		//3、循环条件的改变(趋向于循环条件的结束)
 		for (int i = 1; i <= 5; i++) {
 			System.out.println("Hello World!");
+			System.out.println("Hello World!");
 		}
 	}
 	

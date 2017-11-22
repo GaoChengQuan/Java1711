@@ -7,7 +7,7 @@ import org.junit.Test;
 public class IfDemo {
 	@Test
 	public void test1() {
-		if (boolean) {
+		/*if (boolean) {
 			System.out.println("test1");
 		} else if (condition) {
 			
@@ -15,7 +15,7 @@ public class IfDemo {
 			
 		} else {
 			
-		}
+		}*/
 	}
 
 	@Test
