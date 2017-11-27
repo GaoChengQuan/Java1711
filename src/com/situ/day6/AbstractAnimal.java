@@ -1,26 +1,20 @@
-package com.situ.day5;
+package com.situ.day6;
 
-public class Person {
+public abstract class AbstractAnimal {
 	protected String name;
 	protected int age;
 
-	public Person() {
-		super();//调用父类无参构造方法
+	public AbstractAnimal() {
+		super();
 	}
 
-	public Person(String name, int age) {
+	public AbstractAnimal(String name, int age) {
 		super();
 		this.name = name;
 		this.age = age;
 	}
-	
-	public void show() {
-		System.out.println("name: " + name + ", age: " + age);
-	}
-	
-	public void speak() {
-		System.out.println(name + "正在说话.");
-	}
+
+	public abstract void showInfo();
 
 	public String getName() {
 		return name;
@@ -37,4 +31,5 @@ public class Person {
 	public void setAge(int age) {
 		this.age = age;
 	}
+
 }

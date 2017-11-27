@@ -2,52 +2,29 @@ package com.situ.day5;
 
 public class Student extends Person{
 	private String className;
-	private String gender;
-	private double height;
-	
 
 	public Student() {
-		super();
+		super();//调用父类无参构造方法
 	}
 
-
-	public Student(String name, int age, String className, String gender, double height) {
-		super(name, age);
-		//this.name = name;
-		//this.age = age;
-		this.className = className;
-		this.gender = gender;
-		this.height = height;
-	}
-
-	public String getClassName() {
-		return className;
-	}
-
-	public void setClassName(String className) {
+	public Student(String name, int age, String className) {
+		super(name, age);//调用父类有参构造方法 new Person(name, age)
 		this.className = className;
 	}
-
-	public String getGender() {
-		return gender;
+	
+	@Override
+	public void show() {
+		//super.show();// super父类对象
+		System.out.println("name: " + name + ", className: " + className);
 	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
-	public double getHeight() {
-		return height;
-	}
-
-	public void setHeight(double height) {
-		this.height = height;
+	
+	public void study() {
+		System.out.println(name + "正在学习");
 	}
 
 	@Override
 	public String toString() {
-		return "Student [className=" + className + ", gender=" + gender + ", height=" + height + "]";
+		return "Student [className=" + className + "]";
 	}
-	
 	
 }
