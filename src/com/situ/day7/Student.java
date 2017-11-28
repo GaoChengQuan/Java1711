@@ -3,11 +3,21 @@ package com.situ.day7;
 import java.util.jar.Attributes.Name;
 
 public class Student {
+	private Integer temp;
+	public Integer getTemp() {
+		return temp;
+	}
+	
+	public void setTemp(Integer temp) {
+		this.temp = temp;
+	}
 	private String name;
 	private int age;
 	private String className;
 	private String gender;
 	private double height;
+	
+	
 	public static String country = "CN";
 	
 	//静态代码块

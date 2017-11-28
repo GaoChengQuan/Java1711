@@ -12,6 +12,8 @@ public class StaticDemo {
 		StaticDemo.fun();
 		
 		Math.random();
+		int max = Math.max(2, 3);
+		System.out.println(max);
 		
 		Student student = new Student();
 		System.out.println(student.country);
@@ -31,4 +33,20 @@ public class StaticDemo {
 		//Student student = new Student();
 		System.out.println(Student.country);;
 	}
+	
+	@Test
+	public void test4() {
+		int[] array = new int[]{3, 4, 1, 67, 5};
+		int max = ArrayUtil.max(array);
+		System.out.println(max);
+		ArrayUtil.bubbleSort(array);
+		System.out.println("----");
+		for (int i : array) {
+			System.out.print(i + "  ");
+		}
+		
+		ArrayUtil arrayUtil = new ArrayUtil();
+		arrayUtil.max(array);
+	}
+	
 }
