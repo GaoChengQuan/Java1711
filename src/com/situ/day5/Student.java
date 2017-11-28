@@ -1,5 +1,5 @@
 package com.situ.day5;
-
+//The type Student cannot subclass the final class Person
 public class Student extends Person{
 	private String className;
 
