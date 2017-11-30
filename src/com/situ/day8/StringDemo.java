@@ -156,7 +156,7 @@ public class StringDemo {
 		builder1.append(str2);
 		builder1.append(str3);
 		
-		//
+		//链式编程 this
 		StringBuilder builder = new StringBuilder();
 		builder.append(str1).append(str2).append(str3);
 		

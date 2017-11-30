@@ -1,5 +1,7 @@
 package com.situ.day8;
 
+import org.junit.Test;
+
 public class Student {
 	private String name;
 	private Integer age;
@@ -43,6 +45,11 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [name=" + name + ", age=" + age + ", enumGender=" + enumGender.getValue() + "]";
+	}
+	
+	@Test
+	public void test1() {
+		System.out.println("Student.test1()");
 	}
 
 }
