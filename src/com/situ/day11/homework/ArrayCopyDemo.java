@@ -79,9 +79,38 @@ public class ArrayCopyDemo {
 		int[] dest = new int[len];
 		System.arraycopy(src1, 0, dest, 0, src1.length);
 		System.arraycopy(src2, 0, dest, src1.length, src2.length);
-		
 		return dest;
 	}
 	
+	@Test
+	public void test88() {
+		int[] array = {8, 17, 19, 37, 40, 73, 79, 82, 87, 95, 97, 98};
+		int key = 95;
+		int index = binarySearch(array, key);
+		System.out.println(index);
+	}
 	
+	/**
+	 * 二分查找：查找指定元素在数组中的下标
+	 * @param array 要查找数组
+	 * @param key 要查找元素
+	 * @return 要查找元素在数组中下标,没有该元素返回-1
+	 */
+	private int binarySearch(int[] array, int key) {
+		int low = 0;
+		int high = array.length - 1;
+		
+		while (low <= high) {
+			int mid = (low + high) / 2;
+			if (key > array[mid]) {//要搜索的值在数组的右半部分
+				low = mid + 1;
+			} else if (key < array[mid]) {
+				high = mid - 1;
+			} else if (key == array[mid]) {//找到要搜索到值的情况
+				return mid;
+			}
+		}
+		
+		return -1;
+	}
 }
