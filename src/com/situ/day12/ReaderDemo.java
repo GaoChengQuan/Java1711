@@ -1,9 +1,13 @@
 package com.situ.day12;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.Arrays;
 
 import org.junit.Test;
@@ -76,6 +80,41 @@ public class ReaderDemo {
 			if (fileReader != null) {
 				try {
 					fileReader.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+	
+	@Test
+	public void fileInputStreamCopy() {
+		InputStream inputStream = null;
+		OutputStream outputStream = null;
+		
+		try {
+			inputStream = new FileInputStream("javac.png");
+			outputStream = new FileOutputStream("javac_back.png");
+			byte[] buffer = new byte[1024];
+			int length = 0;
+			while ((length = inputStream.read(buffer)) != -1) {
+				outputStream.write(buffer, 0, length);
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (outputStream != null) {
+				try {
+					outputStream.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if (inputStream != null) {
+				try {
+					inputStream.close();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
