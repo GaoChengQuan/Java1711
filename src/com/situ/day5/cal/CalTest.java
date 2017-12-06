@@ -29,9 +29,9 @@ public class CalTest {
 	@Test
 	public void test3() {
 		//Cannot instantiate the type Cal
-		Cal cal = new Cal(3, 5);
-		int result = cal.getResult();
-		System.out.println(result);
+		//Cal cal = new Cal(3, 5);
+		//int result = cal.getResult();
+		//System.out.println(result);
 	}
 	
 	

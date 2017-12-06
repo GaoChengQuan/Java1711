@@ -54,9 +54,9 @@ public class Student {
 	
 	public static void show() {
 		//Cannot use super in a static context
-		super.toString();
+		//super.toString();
 		//Cannot make a static reference to the non-static field name
-		System.out.println(name);
+		//System.out.println(name);
 		System.out.println(country);
 	}
 

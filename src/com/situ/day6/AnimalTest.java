@@ -7,10 +7,9 @@ public class AnimalTest {
 	
 	@Test
 	public void test1() {
-		String
 		double d = 3.14 * 3.1415926;//魔法数字
 		//The final field AnimalTest.PI cannot be assigned
-		PI = 3;
+		//PI = 3;
 		double d1 = PI * PI;
 	}
 	

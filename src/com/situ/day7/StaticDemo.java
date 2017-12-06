@@ -45,8 +45,8 @@ public class StaticDemo {
 			System.out.print(i + "  ");
 		}
 		
-		ArrayUtil arrayUtil = new ArrayUtil();
-		arrayUtil.max(array);
+		//ArrayUtil arrayUtil = new ArrayUtil();
+		//arrayUtil.max(array);
 	}
 	
 }
