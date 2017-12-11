@@ -17,10 +17,7 @@ public class SqlDemo {
 		Statement statement = null;
 		ResultSet resultSet = null;
 		try {
-			//1、加载驱动：Class.forName("");
-			Class.forName("com.mysql.jdbc.Driver");
-			//2、获得链接对象Connection
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/java1711", "root", "root");
+			connection = JDBCUtil.getConnection();
 			//3、写sql语句
 			String sql = "SELECT * FROM student;";
 			//4、创建Statement
@@ -48,43 +45,19 @@ public class SqlDemo {
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} finally {
-			//6、关闭连接
-			if (resultSet != null) {
-				try {
-					resultSet.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
-			if (statement != null) {
-				try {
-					statement.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
-			if (connection != null) {
-				try {
-					connection.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
+			JDBCUtil.close(connection, statement, resultSet);
 		}
 	}
+
+	
 	
 	@Test
 	public void testUpdate() {
 		Connection connection = null;
 		Statement statement = null;
 		try {
-			//1、加载驱动：Class.forName("");
-			Class.forName("com.mysql.jdbc.Driver");
-			//2、获得链接对象Connection
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/java1711", "root", "root");
+			connection = JDBCUtil.getConnection();
 			//3、写sql语句
 			String sql = "UPDATE student SET age=20 WHERE id=2;";
 			//4、创建Statement
@@ -100,24 +73,9 @@ public class SqlDemo {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} finally {
-			//6、关闭连接
-			if (statement != null) {
-				try {
-					statement.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
-			if (connection != null) {
-				try {
-					connection.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
+			JDBCUtil.close(connection, statement);
 		}
 	}
+
 }
