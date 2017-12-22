@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			div{
+				/*块级元素可以设置宽高，但是不能并排*/
+				/*转成行内元素，但是宽高又不能设置*/
+				/*display: inline;*/
+				width:100px;
+				height:100px;
+				background-color:red ;
+				margin: 2px 0px;
+			}
+			span{
+				/*行内元素设置宽高没有效果*/
+				/*转成块级，又不能并排*/
+				/*display: block;*/
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div>divdivdivdiv</div>
+		<div>divdivdivdiv</div>
+		<span>spanspanspanspan</span>
+		<span>spanspanspanspan</span>
+	</body>
+</html>

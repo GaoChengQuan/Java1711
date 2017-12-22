@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="situ.js" type="text/javascript" charset="utf-8">
+			
+		</script>
+		<script type="text/javascript">
+			function clickMe() {
+				var input1 = document.getElementById("intpu1");
+				console.log(input1);
+				console.log(input1.value);
+				var inputs = document.getElementsByTagName("input");
+				console.log(inputs);
+				console.log(inputs[1]);
+			}
+			
+			function onAlert() {
+				//alert('Hello JS!');
+				var m = 3;//number
+				var n = "3";//string
+				if (m == n) {
+					console.log("m==n");
+				}
+				
+				if (m === n) {
+					console.log("m===n")
+				}
+				
+				if (m) {
+					alert("m : " + m);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input id="intpu1" type="text" value="Hello"/>
+		<input type="button" id="" value="clickMe" onclick="clickMe()"/>
+		<input type="button" id="" value="alert" onclick="onAlert()"/>
+		<input type="button" id="" value="alert" onclick="alert('Hello!!!')"/>
+		<input type="button" id="" value="alert" onclick="onHello()"/>
+		
+	</body>
+</html>

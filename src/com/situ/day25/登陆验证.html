@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+	function checkName() {
+		var name = document.getElementById("name").value;
+		var span = document.getElementById("name_msg");
+		var reg = /^\w{5,10}$/;
+		if (name.match(reg)) {
+			//格式对了，变成绿色
+			//span.class = "ok";
+			span.className = "ok";
+		} else {// null--false
+			span.className = "error";
+		}
+	}
+		
+		function checkEmail() {
+			var name = document.getElementById("email").value;
+			var span = document.getElementById("email_msg");
+			var reg = /[a-zA-Z0-9_-]+@[a-zA-Z0-9_]+(\.[a-zA-Z0-9]+)+/;
+			if (name.match(reg)) {
+				//格式对了，变成绿色
+				//span.class = "ok";
+				span.className = "ok";
+			} else {// null--false
+				span.className = "error";
+			}
+		}
+	</script>
+	<style type="text/css">
+		.ok {
+			color: green;
+		}
+		.error {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<form action="" method="post">
+		<div id="">
+			账号：<input type="text" id="name" onblur="checkName();"/>
+			<span id="name_msg">5-10字母、数字、下划线</span>
+		</div>
+		<div id="">
+			邮箱：<input type="text" id="email" onblur="checkEmail();"/>
+			<span id="email_msg">符合邮箱格式</span>
+		</div>
+		<input type="submit" value="登陆"/>
+	</form>
+</body>
+</html>

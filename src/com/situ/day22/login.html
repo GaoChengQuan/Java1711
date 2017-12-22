@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+<body>
+	<h3>欢迎注册</h3>
+	<form action="#" method="post">
+		<table border="" cellspacing="" cellpadding="">
+			<tr>
+				<td>账号：</td>
+				<!--文本框
+					value:设置默认值
+					maxlength:设置最大长度
+					readonly:只读
+				-->
+				<td><input type="text" maxlength="10" value="zhangsan"/></td>
+			</tr>
+			<tr>
+				<td>密码:</td>
+				<td><input type="password" /></td>
+			</tr>
+			<tr>
+				<td>性别：</td>
+				<td>
+					<!--单选按钮：
+						name:组名，同一组的radio互相排斥
+						checked:设置默认选中
+					-->
+					<input type="radio" name="gender" checked="true"/>男
+					<input type="radio" name="gender"/>女
+				</td>
+			</tr>
+			<tr>
+				<td>兴趣：</td>
+				<td>
+					<input type="checkbox" />音乐<br/>
+					<input type="checkbox" />看书<br/>
+					<input type="checkbox" />篮球<br/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<!--按钮
+						submit:提交表单中的数据
+						reset:将表单中的数据重置为初始值
+						button:没有任何功能，需要通过js定义功能
+					-->
+					<input type="submit" value="注册" />
+					<input type="reset" value="重置" />
+					<input type="button" value="测试" />
+				</td>
+				<!--<td ></td>-->
+			</tr>
+		</table>
+		<!--label-->
+		<div>
+			<input type="checkbox" id="cb"/><label for="cb">用户勾选即代表 同意</label>
+		</div>
+		<!--select:
+			selected:设置默认选中
+		-->
+		<div>
+			<select>
+				<option>北京市</option>
+				<option>上海市</option>
+				<option selected="selected">山东省</option>
+				<option>江苏省</option>
+			</select>
+		</div>
+		<!-- 原样输出<h1>
+			< less than=lt
+			> greater than=gt
+		-->
+		&lt;h1&gt;
+		&copy;
+		<!--textarea
+			rows:规定文本区域内可见的行数，实际的行数可能要比rows要多
+			cols:规定文本区域内可见的列数
+		-->
+		<div>
+			<textarea rows="5" cols="50">京东（JD）[1] 是中国最大的自营式电商企业，2015年第一季度在中国自营式B2C电商市场的占有率为56.3%。
+				[1] 目前，京东集团旗下设有京东商城、京东金融、拍拍网、京东智能、O2O及海外事业部。2014年5月，
+				京东在美国纳斯达克证券交易所正式挂牌上市（股票代码：JD），是中国第一个成功赴美上市的大型综合型电商平台，
+				与腾讯、百度等中国互联网巨头共同跻身全球前十大互联网公司排行榜。2014年，京东市场交易额达到2602亿元，
+				净收入达到1150亿元。[2] 京东创始人刘强东担任京东集团CEO。
+			</textarea>
+		</div>
+	</form>
+</body>
+
+</html>

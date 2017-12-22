@@ -14,7 +14,7 @@ import org.junit.Test;
 public class ObjectStreamDemo {
 	@Test
 	public void objectOutputStreamTest() {
-		Person person = new Person("zhangsan", 20);
+		Person person = new Person("zhangsan");
 		OutputStream outputStream = null;
 		ObjectOutputStream objectOutputStream = null;
 		

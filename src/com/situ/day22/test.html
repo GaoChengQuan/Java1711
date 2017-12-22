@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<span>山东省青岛市<span style="color: red;">城阳区</span></span>春阳路
+		<!--span u=underline下划线 i=italic斜线   b=bold加粗-->
+		<div>
+			<span><u>山东省</u><i>青岛市</i><span style="color: red;">城阳区</span></span><b>春阳路</b>
+		</div>
+		<!--空格折叠现象 
+			普通的空格在html里如果连续的多个会被当成一个空格
+			想要显示空格需要使用特殊的字符 
+			&nbsp;= Non-breaking Space
+		-->
+		<div id="">
+			锄禾日当&nbsp;&nbsp;&nbsp;&nbsp;午<br/>
+			汗滴禾下&nbsp;&nbsp;&nbsp;&nbsp;土<br/>
+			谁知盘中&nbsp;&nbsp;&nbsp;&nbsp;餐<br/>
+			粒粒皆辛&nbsp;&nbsp;&nbsp;&nbsp;苦<br/>
+		</div>
+		
+	<div id="">
+		<!--border:边框 cellspacing:单元格间隙-->
+		<table border="1" cellspacing="0" width="200">
+			<tr>
+				<th>讲师名称</td>
+				<th>讲师名称</td>
+			</tr>
+			<tr>
+				<td>王老师</td>
+				<td>朱老师</td>
+			</tr>
+			<tr>
+				<td>高老师</td>
+				<td>杜老师</td>
+			</tr>
+		</table>
+	</div>
+	<hr />
+	<div id="">
+		<table border="1" cellspacing="0" width="200">
+			<thead>
+				<td>讲师名称</td>
+				<td>讲师名称</td>
+			</thead>
+			<tr>
+				<td rowspan="2">王老师</td>
+				<td>朱老师</td>
+			</tr>
+			<tr>
+				<!--<td>高老师</td>-->
+				<td>杜老师</td>
+			</tr>
+		</table>
+	</div>
+	<br />
+	<div id="">
+		<table border="1" cellspacing="0" width="200">
+			<thead>
+				<td>讲师名称</td>
+				<td>讲师名称</td>
+			</thead>
+			<tr>
+				<td>王老师</td>
+				<td>朱老师</td>
+			</tr>
+			<tr>
+				<td colspan="2">高老师</td>
+				<!--<td>杜老师</td>-->
+			</tr>
+		</table>
+	</div>
+	</body>
+</html>

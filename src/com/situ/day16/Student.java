@@ -2,7 +2,7 @@ package com.situ.day16;
 
 import java.io.Serializable;
 
-public class Student implements Serializable {
+public class Student {
 	private Integer id;
 	private String name;
 	private Integer age;
