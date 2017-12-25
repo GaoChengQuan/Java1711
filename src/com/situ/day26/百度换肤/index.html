@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			img {
+				width: 150px;
+			}
+			#box {
+				height: 150px;
+				text-align: center;
+				padding-top: 50px;
+				background: rgba(255,255,255,.3);
+			}
+			body {
+				background: url(images/1.jpg);
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+				var images = document.getElementsByTagName('img');
+				for (var i = 0; i < images.length; i++) {
+					images[i].onclick = function() {
+						var src = this.src;
+				    	// 豆豆++
+						document.body.style.background = 'url('+src+')';
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<img src="images/1.jpg" />
+			<img src="images/2.jpg" />
+			<img src="images/3.jpg" />
+			<img src="images/4.jpg" />
+			<img src="images/5.jpg" />
+			
+		</div>
+	</body>
+</html>

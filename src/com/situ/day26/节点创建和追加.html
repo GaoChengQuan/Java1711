@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function() {
+				var colors = ['red', 'blue', 'green'];
+				var colors_means = ['热情', '冷静', '生机'];
+				var ul = document.createElement('ul');
+				for (var k in colors) {// k 0,1,2
+					var li = document.createElement('li');
+					li.setAttribute("mean", colors_means[k]);
+					var txt = document.createTextNode(colors[k]);
+					li.appendChild(txt);
+					ul.appendChild(li);
+				}
+				document.body.appendChild(ul);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

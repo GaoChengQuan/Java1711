@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function() {
+				var orange = document.getElementsByTagName("li")[3];
+				var first_ul = document.getElementsByTagName("ul")[0];
+				//first_ul.appendChild(orange);
+				var blue = document.getElementsByTagName("li")[1];
+				first_ul.insertBefore(orange, blue);
+			}
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>red</li>
+			<li>blue</li>
+			<li>green</li>
+		</ul>
+		<ul>
+			<li>orange</li>
+		</ul>
+	</body>
+</html>

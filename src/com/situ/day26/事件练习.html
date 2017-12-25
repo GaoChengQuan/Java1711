@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function() {
+				var cars = ['奔驰', '宝马', '奥迪'];
+				//1.创建ul
+				var ul = document.createElement('ul');
+				//2.for循环遍历创建li,最后把li加到ul
+				for (var i = 0; i < cars.length; i++) {
+					var li = document.createElement('li');
+					var txt = document.createTextNode(cars[i]);
+					li.appendChild(txt);
+					ul.appendChild(li);
+					
+					li.addEventListener('mousemove', function() {
+						this.style.backgroundColor = 'gray';
+					});
+					li.addEventListener('mouseout', function() {
+						this.style.backgroundColor = '';
+					});
+				}
+				//3.最后把ul加到body
+				document.body.appendChild(ul);
+			}
+		</script>
+	</head>
+	<body>
+		<!--<ul>
+			<li>奔驰</li>
+			<li>宝马</li>
+			<li>奥迪</li>
+		</ul>-->
+		
+	</body>
+</html>

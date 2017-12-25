@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function() {
+				var baidu = document.getElementsByTagName("a")[0];
+				console.log(baidu.href);
+				console.log(baidu.addr);//undefined
+				console.log(baidu.getAttribute("addr"));// getName();
+				console.log(baidu.setAttribute("addr","qingdao"));//setName("zhangsan");
+				console.log(baidu.className);
+			}
+			
+			function fn() {
+				var baidu = document.getElementsByTagName("a")[0];
+				baidu.target = "_self";
+			}
+		</script>
+	</head>
+	<body>
+		<a href="http://www.baidu.com" addr="beijing" target="_blank" class="test">超链接</a>
+		<hr/>
+		<input type="button" onclick="fn();"  value="修改属性"/>
+	</body>
+</html>

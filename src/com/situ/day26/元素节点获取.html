@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function() {
+				// 1、document.getElementById
+				var name = document.getElementById("userName");
+				console.log(name);
+				console.log(name.id);
+				name.value = "jddjjdjj";
+				//2、document.getElementsByTagName
+				var inputs = document.getElementsByTagName("input");
+				console.log(inputs);
+				console.log(inputs[1]);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="userName" value="java1711"/><br/>
+		<input type="text" id="userEmail" value="java1711@qq.com"/><br/>
+	</body>
+</html>
