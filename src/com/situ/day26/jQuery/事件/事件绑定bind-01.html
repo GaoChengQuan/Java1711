@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="../../js/jquery-1.11.1.js" ></script>
+
+        <script type="text/javascript">
+        //① bind()事件绑定使用
+        //同一个对象绑定多个click事件
+        $(function(){
+            $('div').bind('click',function(){
+                console.log('谁在碰我？');
+            });
+            $('div').bind('click',function(){
+                console.log('谁又在碰我？');
+            });
+            $('div').bind('mouseover',function(){
+                //给div设置背景色
+                $(this).css('background-color','lightgreen');
+                //$('div').css('background-color','lightgreen');
+            });
+            $('div').bind('mouseout',function(){
+                //给div设置背景色
+                $(this).css('background-color','lightblue');
+                //$('div').css('background-color','lightgreen');
+            });
+        });
+        </script>
+
+        <style type="text/css">
+        div {width:300px; height:200px; background-color:lightblue;}
+        </style>
+    </head>
+    <body>
+        <h2>jquery事件绑定</h2>
+        <div></div>
+    </body>
+</html>

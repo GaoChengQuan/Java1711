@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="../../js/jquery-1.11.1.js"></script>
+
+        <link href="./11.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript">
+        function f1(){
+            //获得复选框选中情况
+            //判断复选框选中：$().attr('checked');-----> true选中/false没有选中
+            //console.log($('.hby:checked'));  //获得选中的复选框项目
+            //$('.hby:checked')
+            var s = "";
+            for (var i = 0; i < $('.hby:checked').length; i++) {
+            	s += $(".hby:checked:eq("+i+")").val() + ",";
+            	/*".hby:checked:eq(0)"
+            	".hby:checked:eq(1)"
+            	".hby:checked:eq(2)"*/
+            }
+            console.log(s);
+
+            //遍历选中的项目，获得其value属性值
+            /*var s = "";
+            for(var i=0; i<$('.hby:checked').length; i++){
+               s += $('.hby:checked:eq('+i+')').val()+",";
+               
+            }
+            //删除最后的","逗号
+            //s = s.substr(位置,长度);   1,3,4,
+            s = s.substr(0,s.length-1);
+            console.log(s);//1,3,4*/
+           
+           /*var array = new Array();
+           for(var i=0; i<$('.hby:checked').length; i++){
+               //s += $('.hby:checked:eq('+i+')').val()+",";
+               array.push($('.hby:checked:eq('+i+')').val());
+            }
+           for (var i = 0; i < array.length; i++) {
+           		console.log(array[i]);
+           }*/
+        }
+        function f2(){
+            //设置复选框选中情况
+            //value值等于2和4项目选中
+            //设置单独复选框选中  $(复选框).attr('checked',true);
+            
+            //设置多个复选框选中  $(全部复选框).val([value值元素，value值元素]);
+            //val([元素，元素])参数是一个数组，即时一个项目选中也是数组
+            $('.hby').val([1,2,4]);
+        }
+        </script>
+        <style type="text/css">
+        div{color:red; border:4px solid blue;}
+        </style>
+    </head>
+    <body>
+        <h1>复选框操作</h1>
+
+        爱好：
+        <input type="checkbox" class="hby" name="hobby" value="1" />篮球&nbsp;
+        <input type="checkbox" class="hby" name="hobby" value="2" />足球&nbsp;
+        <input type="checkbox" class="hby" name="hobby" value="3" />排球&nbsp;
+        <input type="checkbox" class="hby" name="hobby" value="4" />乒乓球&nbsp;
+        
+        <br /><br />
+        <input type="button" value="获取" onclick="f1()" />
+        <input type="button" value="设置" onclick="f2()" />
+    </body>
+</html>

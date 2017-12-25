@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="../../js/jquery-1.11.1.js"></script>
+
+        <link href="./11.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript">
+        function selAll(){
+            //全选
+            // $('li').css('color','red'); //css()方法内部有遍历机制，会为每个li设置样式
+            //$('.hby').attr('checked',true);//attr()方法内部有遍历机制，会为每个复选框设置选中
+            $(".hby").prop("checked", true);
+        }
+        function selNotAll(){
+            //全不选
+            //$('.hby').attr('checked',false);
+            $(".hby").prop("checked", false);
+        }
+        
+        function selFan(){
+            //反选
+            //遍历全部复选框，选中就取消，未选中就设置选中
+            //$('.hby')
+            for(var i=0; i<$('.hby').length; i++){
+                //判断当前复选框选中情况
+                var flag = $('.hby:eq('+i+')').prop('checked');
+                $('.hby:eq('+i+')').prop('checked',!flag);
+            }
+        }
+        </script>
+        <style type="text/css">
+        	div{color:red; border:4px solid blue;}
+        </style>
+    </head>
+    <body>
+        <h1>全选、全不选、反选操作</h1>
+        爱好：
+        <input type="checkbox" checked="true" class="hby" name="hobby" value="1" />篮球&nbsp;
+        <input type="checkbox" class="hby" name="hobby" value="2" />足球&nbsp;
+        <input type="checkbox" class="hby" name="hobby" value="3" />排球&nbsp;
+        <input type="checkbox" class="hby" name="hobby" value="4" />乒乓球&nbsp;
+        
+        <br /><br />
+        <input type="button" value="全选" onclick="selAll()" />
+        <input type="button" value="全不选" onclick="selNotAll()" />
+        <input type="button" value="反选" onclick="selFan()" />
+    </body>
+</html>

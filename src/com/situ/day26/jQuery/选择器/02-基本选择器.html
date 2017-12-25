@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="../../js/jquery-1.11.1.js"></script>
+
+        <script type="text/javascript">
+        function f1(){
+            //① $('#id属性值')
+            //$('#username').css('color','red');
+
+            //② $('tag标签名称')tag标签选择器
+            //$('input').css('background-color','blue');
+
+            //③ $('.class属性值') class类别选择器
+            //$('.apple').css('background-color','green');
+
+            //④ $('*') 通配符选择器
+            //$('*').css('background-color','gray');
+
+            //⑤ $('s1,s2,s3...')联合选择器selector
+            $('p,#username,.apple').css('font-size','25px');
+        }
+        </script>
+
+        <style type="text/css">
+        #username{}
+        p{}
+        .apple{}
+        *{}
+        .apple,span,input{} /*联合选择器*/
+        </style>
+    </head>
+    <body>
+        <h2>基本选择器(灵感来源于css样式选择器)</h2>
+        <input type="text" name="username" value="xiaoqiang" id="username" /><br />
+        <p>Today is Sunday</p>
+        <div class="apple">We are studying jquery</div>
+        <span>this is beijing</span><br />
+
+        <input type="button" value="触发" onclick="f1()" />
+    </body>
+</html>
